@@ -1,5 +1,23 @@
 "use strict";
 
-alert("Hello World!");
+let cat = {
+  head: [],
+  wear(hat) {
+    this.head = hat;
+  },
+};
 
-alert("I'm the new `testing` branch!");
+let white = {
+  __proto__: cat,
+};
+
+let black = {
+  __proto__: cat,
+};
+
+
+white.wear('Shapka');
+console.log(white.head);
+
+
+console.log(black.head);
