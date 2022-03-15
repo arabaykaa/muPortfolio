@@ -81,3 +81,87 @@ header {
 .logIn {
   padding-left: 10px;
 }
+//////////////////////////////////////////main page center part
+main {
+  width: 100%;
+  height: 500px;
+
+  .MidContainer {
+    margin-top: 110px;
+
+    .slogan {
+      padding-left: 200px;
+      font-size: 55px;
+      letter-spacing: 2px;
+    }
+    .description {
+      padding-top: 40px;
+      padding-left: 200px;
+      letter-spacing: 3px;
+      line-height: 20px;
+      font-size: 20px;
+    }
+    .mainBTN {
+      margin-top: 45px;
+      margin-left: 200px;
+      position: relative;
+      display: flex;
+
+      .first {
+        position: relative;
+        background-color: #908e8e;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border-style: solid black;
+        box-shadow: 0px 0px 15px #181818;
+        text-align: center;
+        &:hover {
+          transform: scale(1.1);
+          transition: all 100ms ease;
+        }
+      }
+      .second {
+        position: relative;
+        margin-left: 50px;
+        background-color: #908e8e;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border-style: solid black;
+        box-shadow: 0px 0px 15px #181818;
+        text-align: center;
+        a {
+          margin-left: 35px;
+        }
+        &:hover {
+          transform: scale(1.1);
+          transition: all 100ms ease;
+        }
+      }
+      a {
+        position: absolute;
+        display: flex;
+        margin-top: 12px;
+        margin-left: 40px;
+        font-size: 18px;
+        color: aliceblue;
+        transform: none;
+        align-items: center;
+      }
+    }
+  }
+  .lang {
+    margin: 110px 0 0 200px;
+
+    #langMenu {
+      border-radius: 3px;
+      background-color: rgb(230, 230, 230);
+      border-style: solid;
+      width: 70px;
+      height: 25px;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+}
