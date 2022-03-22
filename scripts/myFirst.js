@@ -20,29 +20,42 @@
 
 // console.log(black.head);
 
-class User {
-  constructor(name, secondname) {
+// Наследование ======================================================
+
+// class User {
+//   constructor(name, secondname) {
+//     this.name = name;
+//     this.secondname = secondname;
+//   }
+//   printName() {
+//     console.log(this.name, this.secondname);
+//   }
+// }
+
+// class Worker extends User {
+//   constructor(name, secondname, salary) {
+//     super(name, secondname);
+//     this.salary = salary;
+//   }
+//   salaryTax() {
+//     console.log(this.salary * 0.8);
+//   }
+// }
+
+// let martin = new User("Martin", "Jhonson");
+// martin.printName();
+
+// let newWorker = new Worker("Sam", "Smith", 3000);
+// newWorker.salaryTax();
+// newWorker.printName();
+
+class Rabbit extends Object {
+  constructor(name) {
+    super();
     this.name = name;
-    this.secondname = secondname;
-  }
-  printName() {
-    console.log(this.name, this.secondname);
   }
 }
 
-class Worker extends User{
-  constructor(name, secondname, salary){
-    super(name, secondname);
-    this.salary = salary;
-  }
-  salaryTax(){
-    console.log(this.salary * 0.8);
-  }
-}
+let rabbit = new Rabbit("Кроль");
 
-let martin = new User("Martin", "Jhonson");
-martin.printName();
-
-let newWorker = new Worker("Sam", "Smith", 3000);
-newWorker.salaryTax();
-newWorker.printName();
+console.log(rabbit.hasOwnProperty("name"));
