@@ -58,7 +58,6 @@ header div ul {
           align-items: center;
   width: 100%;
   height: 100%;
-  margin-left: 70px;
 }
 
 header div ul li {
@@ -72,7 +71,32 @@ header div ul li {
 }
 
 header div ul li:not(:first-child) {
-  padding-left: 80px;
+  padding-left: 50px;
+}
+
+header div ul li input[type=text] {
+  float: right;
+  padding: 6px;
+  border: 1px solid #5e5c5c;
+  border-radius: 3px;
+  margin-left: 30px;
+  font-size: 17px;
+}
+
+header div ul li .searchBTN {
+  background-color: #cccccc;
+  padding: 6px;
+  border: 1px solid #5e5c5c;
+  border-radius: 2px;
+  font-size: 19px;
+}
+
+header div ul li:last-child {
+  padding-left: 0px;
+}
+
+header div ul li:first-child {
+  padding-left: 100px;
 }
 
 .imgCircle {
@@ -92,15 +116,25 @@ header div ul li:not(:first-child) {
           justify-content: center;
 }
 
-.startEnd {
+.start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 140px;
+}
+
+.End {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 100px;
+  margin-left: 70px;
 }
 
 .logIn {
