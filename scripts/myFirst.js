@@ -49,13 +49,35 @@
 // newWorker.salaryTax();
 // newWorker.printName();
 
-class Rabbit extends Object {
-  constructor(name) {
-    super();
-    this.name = name;
-  }
-}
+// class Rabbit extends Object {
+//   constructor(name) {
+//     super();
+//     this.name = name;
+//   }
+// }
 
-let rabbit = new Rabbit("Кроль");
+// let rabbit = new Rabbit("Кроль");
 
-console.log(rabbit.hasOwnProperty("name"));
+// console.log(rabbit.hasOwnProperty("name"));
+//=========================
+//Promise methods
+//=========================
+let urls = [
+  "https://api.github.com/users/iliakan",
+  "https://api.github.com/users/remy",
+];
+
+Promise.allSettled(urls.map((url) => fetch(url))).then((res) =>
+  res.forEach((result, num) => {
+    if (result.status == "fulfilled") {
+      alert(`${urls[num]}:${result.value.status}`);
+    }
+    if (result.status == "rejected") {
+      alert(`${urls[num]}: ${result.reason}`);
+    }
+  })
+);
+
+let a = fetch("https://api.github.com/users/iliakan").then((inf) => {
+  console.log(inf);
+});
