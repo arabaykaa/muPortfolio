@@ -1,4 +1,28 @@
 "use strict";
+//Async/Await
+//===================
+class Cat {
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
+
+  async myAsyncMethod(nu) {
+    let news = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(nu * nu);
+      }, 2000);
+    });
+    let res = await news;
+    console.log(res);
+  }
+}
+
+let asd = new Cat();
+asd.myAsyncMethod(5);
+
+//new Cat().myAsyncMethod().then(console.log);
+console.log("asd");
 
 // let cat = {
 //   head: [],
@@ -62,22 +86,22 @@
 //=========================
 //Promise methods
 //=========================
-let urls = [
-  "https://api.github.com/users/iliakan",
-  "https://api.github.com/users/remy",
-];
+// let urls = [
+//   "https://api.github.com/users/iliakan",
+//   "https://api.github.com/users/remy",
+// ];
 
-Promise.allSettled(urls.map((url) => fetch(url))).then((res) =>
-  res.forEach((result, num) => {
-    if (result.status == "fulfilled") {
-      alert(`${urls[num]}:${result.value.status}`);
-    }
-    if (result.status == "rejected") {
-      alert(`${urls[num]}: ${result.reason}`);
-    }
-  })
-);
+// Promise.allSettled(urls.map((url) => fetch(url))).then((res) =>
+//   res.forEach((result, num) => {
+//     if (result.status == "fulfilled") {
+//       alert(`${urls[num]}:${result.value.status}`);
+//     }
+//     if (result.status == "rejected") {
+//       alert(`${urls[num]}: ${result.reason}`);
+//     }
+//   })
+// );
 
-let a = fetch("https://api.github.com/users/iliakan").then((inf) => {
-  console.log(inf);
-});
+// let a = fetch("https://api.github.com/users/iliakan").then((inf) => {
+//   console.log(inf);
+// });
