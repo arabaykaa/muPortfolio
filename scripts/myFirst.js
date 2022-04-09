@@ -1,28 +1,41 @@
 "use strict";
+
+//LeetCode Task
+let num = [3, 2, 2, 3];
+let v = 3;
+
+let removeElement = function (nums, val) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] == val) {
+      nums.splice(i, 1);
+    }
+  }
+  return nums;
+};
+
+console.log(removeElement(num, v));
 //Async/Await
 //===================
-class Cat {
-  constructor(name, surname) {
-    this.name = name;
-    this.surname = surname;
-  }
+// class Cat {
+//   constructor(name, surname) {
+//     this.name = name;
+//     this.surname = surname;
+//   }
 
-  async myAsyncMethod(nu) {
-    let news = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(nu * nu);
-      }, 2000);
-    });
-    let res = await news;
-    console.log(res);
-  }
-}
+//   async myAsyncMethod(nu) {
+//     let news = new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve(nu * nu);
+//       }, 2000);
+//     });
+//     let res = await news;
+//     console.log(res);
+//   }
+// }
 
-let asd = new Cat();
-asd.myAsyncMethod(5);
-
-//new Cat().myAsyncMethod().then(console.log);
-console.log("asd");
+// let asd = new Cat();
+// asd.myAsyncMethod(5);
+// console.log("asd");
 
 // let cat = {
 //   head: [],
