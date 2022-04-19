@@ -1,19 +1,28 @@
 "use strict";
 
-//LeetCode Task
-let num = [3, 2, 2, 3];
-let v = 3;
+let namee = "jaka";
+let nameArr = [
+  "Artem",
+  "Vlad",
+  "ksenia",
+  "bahtiyar",
+  "sanira",
+  "Jaka",
+  "Altynai",
+  "Arap",
+  "Sumaiya",
+];
 
-let removeElement = function (nums, val) {
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] == val) {
-      nums.splice(i, 1);
+function searchName(imya, nameMas) {
+  for (let i = 0; i < nameMas.length; i++) {
+    if (nameMas[i].toLowerCase() == imya.toLowerCase()) {
+      return nameMas[i];
     }
   }
-  return nums;
-};
+}
 
-console.log(removeElement(num, v));
+console.log(searchName(namee, nameArr));
+
 //Async/Await
 //===================
 // class Cat {
